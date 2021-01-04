@@ -44,6 +44,7 @@ nav {
 .nav__delivery-number__text {
   padding: 0.5rem 0 0 0.5rem;
   font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 .nav__list {
   display: flex;
@@ -161,7 +162,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 30px;
+  padding: 30px 0 0 30px;
   border-radius: 10px;
 }
 .trySection__card:hover {
@@ -191,14 +192,65 @@ nav {
   line-height: 0.9;
 }
 .trySection__button {
+  font-family: "Bebas Neue", cursive;
   text-transform: uppercase;
   font-size: 25px;
   border: none;
   background: rgb(255, 192, 69);
   cursor: pointer;
-  padding: 15px 22px;
+  padding: 10px 20px;
 }
 .trySection__button:hover {
-  background: rgb(221, 168, 63);
-  color: rgb(78, 51, 32);
+  box-shadow: 0px 0px 16px 0px rgba(61, 60, 60, 0.72);
+  background: rgb(61, 37, 20);
+  color: rgb(255, 192, 69);
+}
+/* chooseSection */
+.chooseSection {
+  color: rgb(61, 37, 20);
+  text-align: center;
+}
+.chooseSection__headline {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 50px;
+}
+.chooseSection__details {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 30px;
+  padding: 10px 0;
+  margin: 0 auto;
+  width: 87%;
+}
+.chooseSection__card_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  padding: 50px 0;
+}
+.chooseSection__card__img--sides {
+  margin-top: 26px;
+}
+.chooseSection__card__title {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+  font-size: 37.5px;
+}
+.chooseSection__card__details {
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 40px;
+}
+.chooseSection__card__orderbutton {
+  background: rgb(191, 34, 34);
+  font-family: "Alfa Slab One", cursive;
+  margin-top: 20px;
+  padding: 16px 40px;
+  text-transform: uppercase;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.chooseSection__card__orderbutton:hover {
+  background: rgb(224, 45, 45);
+  box-shadow: 0px 0px 7px 0px rgba(61, 60, 60, 0.5);
 }
