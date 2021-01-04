@@ -1,0 +1,141 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+header {
+  background-image: url("/images/header-background.png");
+  padding-bottom: 4rem;
+}
+nav {
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+}
+.container {
+  width: 92%;
+  margin: 0 auto;
+}
+.nav-containter {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3.5rem;
+}
+.nav__right {
+  display: flex;
+  flex-direction: column;
+}
+.font-color-brown {
+  color: rgb(61, 37, 20);
+}
+.nav-delivery {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 1.75rem;
+}
+.nav__delivery-number__text {
+  padding: 0.5rem 0 0 0.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+.nav__list {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.nav__list__items {
+  padding-left: 3.5rem;
+  cursor: pointer;
+}
+.header__contents {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-family: "Alfa Slab One", cursive;
+}
+.header__contents__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.header__contents__left__bordered-text {
+  font-family: "Bebas Neue", cursive;
+  border: 1px dashed rgb(61, 37, 20);
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  line-height: 32.85px;
+}
+.header__contents__left__title-top {
+  font-family: "Alfa Slab One", cursive;
+  text-transform: uppercase;
+  font-size: 7.1rem;
+  text-shadow: 4px 5px rgb(254, 232, 188);
+  padding-top: 1.2rem;
+  line-height: 1em;
+}
+.header__contents__left__title-bottom {
+  font-family: "Alfa Slab One", cursive;
+  text-shadow: 4px 5px rgb(254, 232, 188);
+  text-transform: uppercase;
+  font-size: 3.54rem;
+}
+.header__contents__img {
+  position: relative;
+  /* padding: 1rem; */
+  z-index: 1;
+}
+
+.header__contents__price {
+  position: absolute;
+  font-family: "Bebas Neue", cursive;
+  background: rgb(191, 34, 34);
+  height: 175px;
+  width: 175px;
+  border-radius: 9999px;
+  color: white;
+  top: 35rem;
+  right: 36rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header__contents__price-border {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='white' stroke-width='4' stroke-dasharray='7%2c15' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+  border-radius: 100px;
+  width: 145px;
+  height: 145px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header__contents__price-number {
+  display: flex;
+  align-items: baseline;
+  line-height: 1;
+}
+.header__contents__price-large {
+  font-size: 4.3rem;
+  display: flex;
+  justify-content: center;
+}
+.header__contents__price-small {
+  font-size: 1.875rem;
+}
+.header__contents__price-text {
+  font-size: 2rem;
+  letter-spacing: 12px;
+  line-height: 1;
+}
