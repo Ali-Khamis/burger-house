@@ -10,6 +10,7 @@ html {
   box-sizing: border-box;
   overflow-x: hidden;
 }
+/* header */
 header {
   background-image: url("/images/header-background.png");
   padding-bottom: 4rem;
@@ -92,7 +93,6 @@ nav {
 }
 .header__contents__img {
   position: relative;
-  /* padding: 1rem; */
   z-index: 1;
 }
 
@@ -138,4 +138,67 @@ nav {
   font-size: 2rem;
   letter-spacing: 12px;
   line-height: 1;
+}
+
+/* trySection */
+.trySection {
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  text-transform: uppercase;
+  color: white;
+  width: 87%;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+.trySection__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 42px;
+  row-gap: 35px;
+  margin: 78px 0 72px 0;
+}
+.trySection__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  border-radius: 10px;
+}
+.trySection__card:hover {
+  box-shadow: 0px 0px 16px 0px rgba(50, 50, 50, 0.72);
+  cursor: pointer;
+}
+.trySection__card--left {
+  background-image: url("/images/trySection-\ left.png");
+  background-size: cover;
+  grid-row: 1 / 3;
+  height: 500px;
+}
+.trySection__card--rightTop {
+  background-size: cover;
+  background-image: url("/images/trySection-\ right-top.png");
+  background-position: center center;
+}
+.trySection__card--rightbottom {
+  background-size: cover;
+  background-image: url("/images/trySection-\ right-bottom.png");
+}
+.trySection__card__Text--small {
+  font-size: 25px;
+}
+.trySection__card__Text--large {
+  font-size: 42px;
+  line-height: 0.9;
+}
+.trySection__button {
+  text-transform: uppercase;
+  font-size: 25px;
+  border: none;
+  background: rgb(255, 192, 69);
+  cursor: pointer;
+  padding: 15px 22px;
+}
+.trySection__button:hover {
+  background: rgb(221, 168, 63);
+  color: rgb(78, 51, 32);
 }
