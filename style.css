@@ -260,3 +260,72 @@ nav {
   background: rgb(224, 45, 45);
   box-shadow: 0px 0px 7px 0px rgba(61, 60, 60, 0.5);
 }
+/* reservationSection */
+.reservationSection {
+  text-align: center;
+}
+.reservationSection__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 27px;
+  width: 60%;
+  margin: 0 auto;
+}
+.reservationSection__form__inputs {
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+  padding: 20px 22px;
+  border-radius: 5px;
+  border: 1px solid rgb(190, 190, 190);
+  text-transform: uppercase;
+}
+.reservationSection__form__inputs::placeholder {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+  font-size: 20px;
+  color: rgb(61, 61, 61);
+}
+.reservationSection__form__inputs--submit {
+  background: rgb(191, 34, 34);
+  font-family: "Alfa Slab One", cursive;
+  color: white;
+  font-size: 20px;
+  padding: 0;
+}
+.reservationSection__form__inputs--submit:hover {
+  background: rgb(224, 45, 45);
+  box-shadow: 0px 0px 7px 0px rgba(61, 60, 60, 0.5);
+}
+.reservationSection__reservation {
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.reservationSection__book {
+  font-family: "Alfa Slab One", cursive;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 400;
+  padding-bottom: 70px;
+}
+.reservationSection__container {
+  position: relative;
+  z-index: 999;
+}
+.reservationSection__burgerImg {
+  position: absolute;
+  top: -100px;
+  left: -140px;
+}
+.reservationSection__bottleImg {
+  position: absolute;
+  left: 35px;
+  top: 130px;
+}
+.reservationSection__mealImg {
+  position: absolute;
+  top: 170px;
+  right: -320px;
+}
