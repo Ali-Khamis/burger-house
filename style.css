@@ -170,6 +170,7 @@ nav {
   align-items: flex-start;
   padding: 30px 0 0 30px;
   border-radius: 10px;
+  transition: all 150ms ease-in;
 }
 .trySection__card:hover {
   box-shadow: 0px 0px 16px 0px rgba(50, 50, 50, 0.72);
@@ -226,7 +227,7 @@ nav {
   line-height: 30px;
   padding: 10px 0;
   margin: 0 auto;
-  width: 87%;
+  width: 75%;
 }
 .chooseSection__card_grid {
   display: grid;
@@ -262,6 +263,7 @@ nav {
 }
 /* reservationSection */
 .reservationSection {
+  margin-bottom: 190px;
   text-align: center;
 }
 .reservationSection__form {
@@ -295,6 +297,7 @@ nav {
 .reservationSection__form__inputs--submit:hover {
   background: rgb(224, 45, 45);
   box-shadow: 0px 0px 7px 0px rgba(61, 60, 60, 0.5);
+  cursor: pointer;
 }
 .reservationSection__reservation {
   font-family: "Bebas Neue", cursive;
@@ -328,4 +331,70 @@ nav {
   position: absolute;
   top: 170px;
   right: -320px;
+}
+/* footer */
+.footer__containter {
+  background-image: url("/images/footer-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  color: white;
+  margin-bottom: 65px;
+}
+.footer__logo {
+  padding: 50px 0;
+}
+.footer__text__containter {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__text__containter__contents {
+  width: 35%;
+  padding-bottom: 165px;
+}
+.footer__text__containter__contents--left {
+  font-family: "Montserrat", sans-serif;
+  line-height: 25px;
+}
+.footer__text__containter__contents--right {
+  font-family: "Bebas Neue", cursive;
+  align-self: center;
+  font-size: 21px;
+  line-height: 37.5px;
+}
+
+.footer__text__containter__contents--right__items {
+  display: flex;
+}
+.footer__text__containter__contents--right__items__fontawesome__location {
+  padding: 8px 38px 0 3px;
+}
+.footer__text__containter__contents--right__items__fontawesome__email {
+  padding: 8px 35px 0 0;
+}
+.footer__social__and__copyrights__containter {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__copyrights {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+}
+.footer__socialMedia__container {
+  display: flex;
+  list-style-type: none;
+}
+.footer__socialMedia__container__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 9999px;
+  margin-left: 13px;
+  width: 30px;
+  height: 30px;
+}
+.footer__socialMedia__icon {
+  padding: 7px;
+  color: black;
 }
