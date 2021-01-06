@@ -50,6 +50,7 @@ nav {
 }
 .nav__bars {
   display: none;
+  cursor: pointer;
 }
 .nav__right {
   display: flex;
