@@ -15,7 +15,7 @@ html {
 }
 /* header */
 header {
-  background-image: url("/images/header-background.png");
+  background-image: url("images/header-background.png");
   padding-bottom: 4rem;
 }
 img {
@@ -342,20 +342,20 @@ nav {
   cursor: pointer;
 }
 .try-Section__card--left {
-  background-image: url("/images/trySection-\ left.png");
+  background-image: url("images/trySection-\ left.png");
   background-size: cover;
   grid-row: 1 / 3;
   height: 500px;
 }
 .try-Section__card--rightTop {
   background-size: cover;
-  background-image: url("/images/trySection-\ right-top.png");
+  background-image: url("images/trySection-\ right-top.png");
   background-position: center center;
 }
 .try-Section__card--rightbottom {
   background-position: center center;
   background-size: cover;
-  background-image: url("/images/trySection-\ right-bottom.png");
+  background-image: url("images/trySection-\ right-bottom.png");
 }
 .try-Section__card__Text--small {
   font-size: 25px;
@@ -597,8 +597,8 @@ nav {
 .reservation-Section {
   padding: 120px 0;
   text-align: center;
-  background-image: url("/images/reservationSection-\ burger.png"),
-    url("/images/reservationSection-bottle.png");
+  background-image: url("images/reservationSection-\ burger.png"),
+    url("images/reservationSection-bottle.png");
   background-position: top 0 left -80px, bottom -20px left 150px;
   background-repeat: no-repeat;
 }
@@ -665,7 +665,7 @@ nav {
     display: none;
   }
   .reservation-Section {
-    background-image: url("/images/reservationSection-\ burger.png");
+    background-image: url("images/reservationSection-\ burger.png");
     background-position: top 0 left -80px;
   }
 }
@@ -691,7 +691,7 @@ nav {
 }
 /* footer */
 .footer__containter {
-  background-image: url("/images/footer-background.png");
+  background-image: url("images/footer-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 30px 30px 20px 40px;
