@@ -6,6 +6,9 @@
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
+body {
+  overflow-x: hidden;
+}
 html {
   box-sizing: border-box;
   overflow-x: hidden;
@@ -15,23 +18,41 @@ header {
   background-image: url("/images/header-background.png");
   padding-bottom: 4rem;
 }
+img {
+  max-width: 100%;
+}
 nav {
   width: 100%;
   position: absolute;
   z-index: 999;
 }
+.header__container {
+  position: relative;
+}
 .container {
   width: 92%;
+  max-width: 1440px;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .container {
+    width: 85%;
+  }
+}
+nav {
+  position: absolute;
+  top: 0;
+}
 .nav-containter {
+  padding-top: 3.5rem;
   display: flex;
   justify-content: space-between;
-  padding-top: 3.5rem;
+}
+.nav__bars {
+  display: none;
 }
 .nav__right {
   display: flex;
-  flex-direction: column;
 }
 .font-color-brown {
   color: rgb(61, 37, 20);
@@ -39,7 +60,8 @@ nav {
 .nav-delivery {
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 1.75rem;
+  align-items: center;
+  padding-right: 0.5rem;
 }
 .nav__delivery-number__text {
   padding: 0.5rem 0 0 0.5rem;
@@ -64,12 +86,12 @@ nav {
 .nav__list__items:hover {
   box-shadow: 0px 0px 7px 0px rgba(61, 60, 60, 0.5);
 }
-
 .header__contents {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
   font-family: "Alfa Slab One", cursive;
+  padding-top: 14rem;
 }
 .header__contents__left {
   display: flex;
@@ -83,6 +105,7 @@ nav {
   font-size: 1.5rem;
   padding: 0 1rem;
   line-height: 32.85px;
+  font-weight: 400;
 }
 .header__contents__left__title-top {
   font-family: "Alfa Slab One", cursive;
@@ -98,25 +121,26 @@ nav {
   text-transform: uppercase;
   font-size: 3.54rem;
 }
-.header__contents__img {
+.header__contents__right {
   position: relative;
   z-index: 1;
 }
-
 .header__contents__price {
   position: absolute;
   font-family: "Bebas Neue", cursive;
   background: rgb(191, 34, 34);
-  height: 175px;
-  width: 175px;
+  height: 170px;
+  width: 170px;
   border-radius: 9999px;
   color: white;
-  top: 35rem;
-  right: 36rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  bottom: 2.5%;
+  left: 5%;
+  z-index: 2;
+  transition: 100ms;
 }
 .header__contents__price-border {
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='white' stroke-width='4' stroke-dasharray='7%2c15' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
@@ -146,25 +170,166 @@ nav {
   letter-spacing: 12px;
   line-height: 1;
 }
-
-/* trySection */
-.trySection {
-  text-align: center;
+.header__contents__img {
+  transition: 150ms;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 165, 1),
+    transparent 60%
+  );
+}
+@media (max-width: 1024px) {
+  .header__contents {
+    flex-direction: column;
+    padding-top: 8rem;
+    align-items: center;
+  }
+  .header__contents__right {
+    padding-top: 5rem;
+    order: 1;
+    margin-bottom: 1rem;
+  }
+  .header__contents__left {
+    order: 2;
+  }
+  .header__contents__img {
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 255, 165, 1),
+      transparent 50%
+    );
+    background-position: 0 -40px;
+  }
+}
+@media (max-width: 768px) {
+  .nav__logo__containter {
+    margin: 0 -8.5%;
+    padding: 1.5rem 24px 24px 1rem;
+    margin-top: 0;
+    background-color: rgb(255, 198, 87);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .box-shadow {
+    box-shadow: 0px 0px 16px 0px rgba(50, 50, 50, 0.2);
+  }
+  .delivery__display {
+    display: none;
+  }
+  .nav-delivery {
+    padding-bottom: 0;
+    padding-top: 1rem;
+  }
+  .nav__bars {
+    display: flex;
+  }
+  .nav__logo {
+    width: 200px;
+  }
+  .nav-containter {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+  }
+  .nav__list {
+    background-color: rgb(255, 198, 87);
+    display: flex;
+    flex-direction: column;
+    padding-right: 0;
+    margin: 0 -8.5%;
+  }
+  .nav__list__items {
+    display: none;
+  }
+  .nav__list__items.active {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 0;
+  }
+  .header__contents {
+    padding-top: 5rem;
+  }
+  .header__contents__price-large {
+    font-size: 2.5rem;
+  }
+  .header__contents__price-small {
+    font-size: 1rem;
+  }
+  .header__contents__price-text {
+    font-size: 1.25rem;
+  }
+  .header__contents__left__title-top {
+    font-size: 3.5rem;
+  }
+  .header__contents__left__title-bottom {
+    font-size: 1.77rem;
+  }
+  .header__contents__right {
+    order: 1;
+    margin-bottom: 1rem;
+  }
+  .header__contents__img {
+    width: 100%;
+  }
+  .header__contents__price {
+    height: 120px;
+    width: 120px;
+    bottom: 8%;
+    left: 8%;
+  }
+  .header__contents__price-border {
+    height: 100px;
+    width: 100px;
+  }
+}
+@media (max-width: 450px) {
+  .header__contents__price {
+    height: 100px;
+    width: 100px;
+    bottom: 0;
+    left: 7%;
+  }
+  .header__contents__price-border {
+    height: 80px;
+    width: 80px;
+  }
+  .header__contents__price-large {
+    font-size: 2.3rem;
+  }
+  .header__contents__price-small {
+    font-size: 1rem;
+  }
+  .header__contents__price-text {
+    font-size: 0.9rem;
+  }
+  .header__contents__img {
+    background-position: 0 -30px;
+  }
+}
+/* try-Section */
+.try-Section {
   font-family: "Bebas Neue", cursive;
   text-transform: uppercase;
   color: white;
-  width: 87%;
-  margin: 0 auto;
   margin-bottom: 35px;
+  padding: 0 5%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
 }
-.trySection__grid {
+.try-Section__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 42px;
   row-gap: 35px;
   margin: 78px 0 72px 0;
+  width: 100%;
 }
-.trySection__card {
+.try-Section__card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -172,33 +337,34 @@ nav {
   border-radius: 10px;
   transition: all 150ms ease-in;
 }
-.trySection__card:hover {
+.try-Section__card:hover {
   box-shadow: 0px 0px 16px 0px rgba(50, 50, 50, 0.72);
   cursor: pointer;
 }
-.trySection__card--left {
+.try-Section__card--left {
   background-image: url("/images/trySection-\ left.png");
   background-size: cover;
   grid-row: 1 / 3;
   height: 500px;
 }
-.trySection__card--rightTop {
+.try-Section__card--rightTop {
   background-size: cover;
   background-image: url("/images/trySection-\ right-top.png");
   background-position: center center;
 }
-.trySection__card--rightbottom {
+.try-Section__card--rightbottom {
+  background-position: center center;
   background-size: cover;
   background-image: url("/images/trySection-\ right-bottom.png");
 }
-.trySection__card__Text--small {
+.try-Section__card__Text--small {
   font-size: 25px;
 }
-.trySection__card__Text--large {
+.try-Section__card__Text--large {
   font-size: 42px;
   line-height: 0.9;
 }
-.trySection__button {
+.try-Section__button {
   font-family: "Bebas Neue", cursive;
   text-transform: uppercase;
   font-size: 25px;
@@ -206,22 +372,56 @@ nav {
   background: rgb(255, 192, 69);
   cursor: pointer;
   padding: 10px 20px;
+  max-width: 220px;
 }
-.trySection__button:hover {
+.try-Section__button:hover {
   box-shadow: 0px 0px 16px 0px rgba(61, 60, 60, 0.72);
   background: rgb(61, 37, 20);
   color: rgb(255, 192, 69);
 }
-/* chooseSection */
-.chooseSection {
+@media (max-width: 768px) {
+  .try-Section__card {
+    padding: 20px 0 0 20px;
+  }
+  .try-Section__grid {
+    grid-template-columns: 1fr;
+  }
+  .try-Section__card--left {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+  }
+  .try-Section__card--rightTop {
+    height: 150px;
+  }
+  .try-Section__card--rightbottom {
+    height: 150px;
+  }
+  .try-Section__card__Text--small {
+    font-size: 20px;
+  }
+  .try-Section__card__Text--large {
+    font-size: 32px;
+    line-height: 0.9;
+  }
+}
+@media (max-width: 1200px) {
+  .try-Section__card {
+    background-position: center;
+  }
+}
+/* choose-Section */
+.choose-Section {
   color: rgb(61, 37, 20);
   text-align: center;
 }
-.chooseSection__headline {
+.choose-Section__headline {
   font-family: "Alfa Slab One", cursive;
+  text-transform: uppercase;
   font-size: 50px;
+  font-weight: 400;
 }
-.chooseSection__details {
+.choose-Section__details {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   line-height: 30px;
@@ -229,25 +429,30 @@ nav {
   margin: 0 auto;
   width: 75%;
 }
-.chooseSection__card_grid {
+.choose-Section__card_grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 2rem;
-  padding: 50px 0;
+  padding-top: 50px;
 }
-.chooseSection__card__img--sides {
-  margin-top: 26px;
+.choose-Section__card__img {
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.chooseSection__card__title {
+.choose-Section__card__title {
   font-family: "Bebas Neue", cursive;
   font-weight: 400;
   font-size: 37.5px;
+  line-height: 1;
+  margin-top: 2rem;
 }
-.chooseSection__card__details {
+.choose-Section__card__details {
   font-family: "Montserrat", sans-serif;
   padding: 10px 40px;
 }
-.chooseSection__card__orderbutton {
+.choose-Section__card__orderbutton {
   background: rgb(191, 34, 34);
   font-family: "Alfa Slab One", cursive;
   margin-top: 20px;
@@ -256,24 +461,155 @@ nav {
   border: none;
   color: white;
   cursor: pointer;
+  font-size: 1rem;
+  padding: 18px 40px;
 }
-.chooseSection__card__orderbutton:hover {
+.choose-Section__card__orderbutton:hover {
   background: rgb(224, 45, 45);
   box-shadow: 0px 0px 7px 0px rgba(61, 60, 60, 0.5);
 }
-/* reservationSection */
-.reservationSection {
-  margin-bottom: 190px;
-  text-align: center;
+@media (max-width: 768px) {
+  .choose-Section__card_grid {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    padding-top: 25px;
+  }
+  .choose-Section__headline {
+    font-size: 35px;
+  }
+  .choose-Section__details {
+    line-height: 1.5;
+  }
+  .choose-Section__card__title {
+    margin-top: 0rem;
+  }
 }
-.reservationSection__form {
+
+/* slider-Section */
+.slider-Section {
+  margin-top: 120px;
+}
+.slider-Section__container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  box-shadow: 18px 18px 35px 0px rgba(50, 50, 50, 0.2);
+}
+.glide {
+  padding: 55px 0 0 55px;
+}
+.glide__slide h2 {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 42px;
+  line-height: 45px;
+  font-weight: 400;
+  padding-bottom: 40px;
+  text-transform: uppercase;
+}
+.glide__slide h3 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 400;
+  color: rgb(61, 61, 61);
+  letter-spacing: 0.06em;
+}
+.glide__slide p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 21px;
+  line-height: 33px;
+  color: rgb(61, 61, 61);
+  width: 75%;
+}
+.choose-Section__img {
+  padding: 27px;
+  justify-self: flex-end;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+.glide__slide:hover {
+  cursor: grab;
+  height: 100%;
+}
+.glide__bullets {
+  display: flex;
+  margin-top: 90px;
+  margin-bottom: 60px;
+}
+.glide__bullet {
+  height: 17px;
+  width: 17px;
+  border: none;
+  border-radius: 9999px;
+  margin-right: 8px;
+  background: rgb(220, 220, 220);
+}
+.glide__bullet--active {
+  background: rgb(255, 192, 69);
+}
+.glide__bullet:hover {
+  cursor: pointer;
+  background: rgb(255, 192, 69);
+}
+
+@media (max-width: 768px) {
+  .slider-Section {
+    margin: 50px 0;
+  }
+  .slider-Section__container {
+    display: grid;
+    grid-template-columns: 100%;
+    box-shadow: 10px 10px 35px 0px rgba(50, 50, 50, 0.2);
+  }
+  .choose-Section__img {
+    grid-row: 1 / 2;
+    max-height: 100%;
+    height: unset;
+  }
+
+  .glide {
+    padding: 0px 27px 27px 27px;
+    display: flex;
+    flex-direction: column;
+  }
+  .glide__bullets {
+    display: flex;
+    margin-top: 0px;
+    padding-top: 30px;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  .glide__slide h3 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .glide__slide h2 {
+    font-size: 30px;
+    line-height: 35px;
+    padding-bottom: 20px;
+  }
+  .glide__slide p {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+/* reservation-Section */
+.reservation-Section {
+  padding: 120px 0;
+  text-align: center;
+  background-image: url("/images/reservationSection-\ burger.png"),
+    url("/images/reservationSection-bottle.png");
+  background-position: top 0 left -80px, bottom -20px left 150px;
+  background-repeat: no-repeat;
+}
+.reservation-Section__form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 27px;
   width: 60%;
   margin: 0 auto;
 }
-.reservationSection__form__inputs {
+.reservation-Section__form__inputs {
   font-family: "Bebas Neue", cursive;
   font-size: 20px;
   padding: 20px 22px;
@@ -281,63 +617,84 @@ nav {
   border: 1px solid rgb(190, 190, 190);
   text-transform: uppercase;
 }
-.reservationSection__form__inputs::placeholder {
+.reservation-Section__form__inputs::placeholder {
   font-family: "Bebas Neue", cursive;
   font-weight: 400;
   font-size: 20px;
   color: rgb(61, 61, 61);
 }
-.reservationSection__form__inputs--submit {
+.reservation-Section__form__inputs--submit {
   background: rgb(191, 34, 34);
   font-family: "Alfa Slab One", cursive;
   color: white;
   font-size: 20px;
   padding: 0;
 }
-.reservationSection__form__inputs--submit:hover {
+.reservation-Section__form__inputs--submit:hover {
   background: rgb(224, 45, 45);
   box-shadow: 0px 0px 7px 0px rgba(61, 60, 60, 0.5);
   cursor: pointer;
 }
-.reservationSection__reservation {
+.reservation-Section__reservation {
   font-family: "Bebas Neue", cursive;
   font-size: 30px;
   line-height: 45px;
   font-weight: 400;
   letter-spacing: 2px;
 }
-.reservationSection__book {
+.reservation-Section__book {
   font-family: "Alfa Slab One", cursive;
   text-transform: uppercase;
   font-size: 50px;
   font-weight: 400;
   padding-bottom: 70px;
+  letter-spacing: 0.06em;
 }
-.reservationSection__container {
+.reservation-Section__container {
   position: relative;
   z-index: 999;
 }
-.reservationSection__burgerImg {
+.reservation-Section__mealImg {
   position: absolute;
-  top: -100px;
-  left: -140px;
+  top: 100px;
+  right: -370px;
+  pointer-events: none;
 }
-.reservationSection__bottleImg {
-  position: absolute;
-  left: 35px;
-  top: 130px;
+@media (max-width: 1280px) {
+  .reservation-Section__mealImg {
+    display: none;
+  }
+  .reservation-Section {
+    background-image: url("/images/reservationSection-\ burger.png");
+    background-position: top 0 left -80px;
+  }
 }
-.reservationSection__mealImg {
-  position: absolute;
-  top: 170px;
-  right: -320px;
+@media (max-width: 768px) {
+  .reservation-Section {
+    margin-bottom: 0px;
+    background-image: none;
+  }
+  .reservation-Section__reservation {
+    font-size: 25px;
+  }
+  .reservation-Section__book {
+    padding-bottom: 40px;
+    font-size: 35px;
+  }
+  .reservation-Section__form {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .reservation-Section__form__inputs--submit {
+    padding: 20px 0;
+  }
 }
 /* footer */
 .footer__containter {
   background-image: url("/images/footer-background.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 30px;
+  padding: 30px 30px 20px 40px;
   color: white;
   margin-bottom: 65px;
 }
@@ -362,7 +719,6 @@ nav {
   font-size: 21px;
   line-height: 37.5px;
 }
-
 .footer__text__containter__contents--right__items {
   display: flex;
 }
@@ -397,4 +753,33 @@ nav {
 .footer__socialMedia__icon {
   padding: 7px;
   color: black;
+}
+@media (max-width: 768px) {
+  .footer__logo {
+    padding-bottom: 25px;
+    padding-top: 0;
+  }
+  .footer__text__containter {
+    flex-direction: column;
+  }
+  .footer__text__containter__contents {
+    width: 100%;
+    padding-bottom: 35px;
+  }
+  .footer__containter {
+    margin-bottom: 1rem;
+  }
+  .footer__text__containter__contents--right__items__fontawesome__location {
+    padding: 8px 10px 0 3px;
+  }
+  .footer__text__containter__contents--right__items__fontawesome__email {
+    padding: 8px 12px 0 0;
+  }
+  .footer__social__and__copyrights__containter {
+    flex-direction: column;
+  }
+  .footer__copyrights {
+    padding-top: 25px;
+    order: 2;
+  }
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+
     <script
       src="https://kit.fontawesome.com/d9d7f62622.js"
       crossorigin="anonymous"
@@ -13,32 +13,36 @@
       href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/glide.core.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
     <title>Burger house</title>
   </head>
   <body>
     <header class="font-color-brown">
-      <nav>
-        <div class="container nav-containter">
-          <div>
-            <img src="/images/logo.png" alt="" />
-          </div>
-          <div class="nav__right">
-            <div class="nav-delivery">
-              <img src="images/mini-vespa.png" alt="" />
-              <p class="nav__delivery-number__text">
-                Express Delivery +1 234 567 890
-              </p>
+      <div class="header__container container">
+        <nav>
+          <div class="nav-containter">
+            <div class="nav__logo__containter box-shadow">
+              <img class="nav__logo" src="/images/logo.png" alt="" />
+              <i class="fas fa-bars fa-2x nav__bars"></i>
             </div>
-            <ul class="nav__list">
-              <li class="nav__list__items">home</li>
-              <li class="nav__list__items">menu</li>
-              <li class="nav__list__items">our story</li>
-              <li class="nav__list__items">contact us</li>
-            </ul>
+            <div class="nav__right">
+              <div class="nav-delivery">
+                <img src="images/mini-vespa.png" alt="" />
+                <p class="nav__delivery-number__text">
+                  Express Delivery +1 234 567 890
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </nav>
-      <div class="container">
+          <ul class="nav__list">
+            <li class="nav__list__items">home</li>
+            <li class="nav__list__items">menu</li>
+            <li class="nav__list__items">our story</li>
+            <li class="nav__list__items">contact us</li>
+          </ul>
+        </nav>
         <div class="header__contents">
           <div class="header__contents__left">
             <p class="header__contents__left__bordered-text">
@@ -47,8 +51,10 @@
             <h1 class="header__contents__left__title-top">Burger</h1>
             <h2 class="header__contents__left__title-bottom">week</h2>
           </div>
-          <div class="header__contents__img">
-            <img src="images/burger-fries-shadow-glow-drink.png" alt="" />
+          <div class="header__contents__right">
+            <div class="header__contents__img">
+              <img src="images/burger-fries-shadow-drink.png" alt="" />
+            </div>
             <div class="header__contents__price">
               <div class="header__contents__price-border">
                 <div class="header__contents__price-number">
@@ -62,130 +68,162 @@
         </div>
       </div>
     </header>
-    <section class="trySection">
-      <div class="trySection__grid">
-        <div class="trySection__card trySection__card--left">
-          <p class="trySection__card__Text--small">Try it today</p>
-          <p class="trySection__card__Text--large">Most Popular Burger</p>
+    <section class="try-Section container">
+      <div class="try-Section__grid">
+        <div class="try-Section__card try-Section__card--left">
+          <p class="try-Section__card__Text--small">Try it today</p>
+          <p class="try-Section__card__Text--large">Most Popular Burger</p>
         </div>
-        <div class="trySection__card trySection__card--rightTop">
-          <p class="trySection__card__Text--small">Try it today</p>
-          <p class="trySection__card__Text--large">More fun</p>
-          <p class="trySection__card__Text--large">more taste</p>
+        <div class="try-Section__card try-Section__card--rightTop">
+          <p class="try-Section__card__Text--small">Try it today</p>
+          <p class="try-Section__card__Text--large">More fun</p>
+          <p class="try-Section__card__Text--large">more taste</p>
         </div>
-        <div class="trySection__card trySection__card--rightbottom">
-          <p class="trySection__card__Text--small">Try it today</p>
-          <p class="trySection__card__Text--large">fresh & chili</p>
+        <div class="try-Section__card try-Section__card--rightbottom">
+          <p class="try-Section__card__Text--small">Try it today</p>
+          <p class="try-Section__card__Text--large">fresh & chili</p>
         </div>
       </div>
-      <button class="trySection__button font-color-brown">
+      <button class="try-Section__button font-color-brown">
         always tasty burger
       </button>
     </section>
-    <section class="chooseSection">
+    <section class="choose-Section">
       <div class="container">
-        <h2 class="chooseSection__headline">choose & enjoy</h2>
-        <p class="chooseSection__details">
+        <h2 class="choose-Section__headline">choose & enjoy</h2>
+        <p class="choose-Section__details">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
           suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
           lacus vel facilisis.
         </p>
-        <div class="chooseSection__card_grid">
-          <div class="chooseSection__card">
-            <img
-              class="chooseSection__card__img--sides"
-              src="images/chooseSection - sides.png"
-              alt=""
-            />
-            <h3 class="chooseSection__card__title">Lorem ipsum dolor</h3>
-            <p class="chooseSection__card__details">
+        <div class="choose-Section__card_grid">
+          <div class="choose-Section__card">
+            <div class="choose-Section__card__img">
+              <img src="images/chooseSection - sides.png" alt="" />
+            </div>
+            <h3 class="choose-Section__card__title">Lorem ipsum dolor</h3>
+            <p class="choose-Section__card__details">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             </p>
-            <button class="chooseSection__card__orderbutton">order now</button>
+            <button class="choose-Section__card__orderbutton">order now</button>
           </div>
-          <div class="chooseSection__card">
-            <img
-              class="chooseSection__card__img"
-              src="images/chooseSection - middle.png"
-              alt=""
-            />
-            <h3 class="chooseSection__card__title">Lorem ipsum dolor</h3>
-            <p class="chooseSection__card__details">
+          <div class="choose-Section__card">
+            <div class="choose-Section__card__img">
+              <img src="images/chooseSection - middle.png" alt="" />
+            </div>
+            <h3 class="choose-Section__card__title">Lorem ipsum dolor</h3>
+            <p class="choose-Section__card__details">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             </p>
-            <button class="chooseSection__card__orderbutton">order now</button>
+            <button class="choose-Section__card__orderbutton">order now</button>
           </div>
-          <div class="chooseSection__card">
-            <img
-              class="chooseSection__card__img--sides"
-              src="images/chooseSection - sides.png"
-              alt=""
-            />
-            <h3 class="chooseSection__card__title">Lorem ipsum dolor</h3>
-            <p class="chooseSection__card__details">
+          <div class="choose-Section__card">
+            <div class="choose-Section__card__img">
+              <img src="images/chooseSection - sides.png" alt="" />
+            </div>
+            <h3 class="choose-Section__card__title">Lorem ipsum dolor</h3>
+            <p class="choose-Section__card__details">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             </p>
-            <button class="chooseSection__card__orderbutton">order now</button>
+            <button class="choose-Section__card__orderbutton">order now</button>
           </div>
         </div>
       </div>
     </section>
-    <section class="reservationSection">
-      <div class="container reservationSection__container">
-        <h3 class="reservationSection__reservation font-color-brown">
+    <section class="slider-Section">
+      <div class="container slider-Section__container">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides font-color-brown">
+              <li class="glide__slide">
+                <h3>Discover</h3>
+                <h2>Upcoming Events</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                  maecenas accumsan lacus vel facilisis.
+                </p>
+              </li>
+              <li class="glide__slide">
+                <h3>Discover</h3>
+                <h2>Upcoming Events</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                  maecenas accumsan lacus vel facilisis.
+                </p>
+              </li>
+              <li class="glide__slide">
+                <h3>Discover</h3>
+                <h2>Upcoming Events</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                  maecenas accumsan lacus vel facilisis.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+          </div>
+        </div>
+        <img
+          class="choose-Section__img"
+          src="/images/sliderSection.png"
+          alt=""
+        />
+      </div>
+    </section>
+    <section class="reservation-Section">
+      <div class="container reservation-Section__container">
+        <h3 class="reservation-Section__reservation font-color-brown">
           reservation
         </h3>
-        <h2 class="reservationSection__book font-color-brown">
+        <h2 class="reservation-Section__book font-color-brown">
           book your table
         </h2>
-        <form action="" class="reservationSection__form">
+        <form action="" class="reservation-Section__form">
           <input
-            class="reservationSection__form__inputs"
+            class="reservation-Section__form__inputs"
             type="text"
             placeholder="name"
           />
           <input
-            class="reservationSection__form__inputs"
+            class="reservation-Section__form__inputs"
             type="email"
             placeholder="email"
           />
           <input
-            class="reservationSection__form__inputs"
+            class="reservation-Section__form__inputs"
             type="text"
             placeholder="date"
           />
           <input
-            class="reservationSection__form__inputs"
+            class="reservation-Section__form__inputs"
             type="text"
             placeholder="time"
           />
           <input
-            class="reservationSection__form__inputs"
+            class="reservation-Section__form__inputs"
             type="text"
             placeholder="people"
           />
           <input
-            class="reservationSection__form__inputs reservationSection__form__inputs--submit"
+            class="reservation-Section__form__inputs reservation-Section__form__inputs--submit"
             type="submit"
             value="find a table"
           />
         </form>
-        <img
-          class="reservationSection__burgerImg"
-          src="images/reservationSection- burger.png"
-          alt=""
-        />
-        <img
-          class="reservationSection__bottleImg"
-          src="images/reservationSection-bottle.png"
-          alt=""
-        />
-        <img
-          class="reservationSection__mealImg"
-          src="images/reservationSection-meal.png"
-          alt=""
-        />
+        <div class="reservation-Section__mealImg">
+          <img src="images/reservationSection-meal.png" alt="" />
+        </div>
       </div>
     </section>
     <footer>
@@ -221,7 +259,6 @@
           <p class="footer__copyrights">
             © Company Name 2020. All rights reserved.
           </p>
-
           <ul class="footer__socialMedia__container">
             <li class="footer__socialMedia__container__item">
               <a href="https://www.instagram.com/"
@@ -249,5 +286,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="script.js"></script>
   </body>
 </html>
